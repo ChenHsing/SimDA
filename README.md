@@ -1,6 +1,6 @@
 #  SimDA: Simple Diffusion Adapter for Efficient Video Generation
 
-This is the official repo of the paper [SimDA: Simple Diffusion Adapter for Efficient Video Generation](https://arxiv.org/abs/2308.09710).
+This is the official repo of the paper [SimDA: Simple Diffusion Adapter for Efficient Video Generation](https://arxiv.org/abs/2308.09710). [project](https://chenhsing.github.io/SimDA/)
 
 We will release the code immediately once the paper is accepted.
 
