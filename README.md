@@ -45,7 +45,7 @@ To fine-tune the text-to-image diffusion models for text-to-video generation, ru
 sh train.sh
 ```
 
-Note: Tuning a 24-frame video usually takes `200~500` steps, about `10~15` minutes using one A100 GPU. 
+Note: Tuning a 24-frame video usually takes `200~500` steps, about `5~10` minutes using one A100 GPU. 
 Reduce `n_sample_frames` if your GPU memory is limited.
 
 ### Inference
@@ -59,7 +59,7 @@ from simda.util import save_videos_grid
 import torch
 
 pretrained_model_path = "./checkpoints/stable-diffusion-v1-4"
-my_model_path = "./outputs/man-skiing"
+my_model_path = "./outputs/car-turn"
 unet = UNet3DConditionModel.from_pretrained(my_model_path, subfolder='unet', torch_dtype=torch.float16).to('cuda')
 pipe = SimDAipeline.from_pretrained(pretrained_model_path, unet=unet, torch_dtype=torch.float16).to("cuda")
 pipe.enable_xformers_memory_efficient_attention()
